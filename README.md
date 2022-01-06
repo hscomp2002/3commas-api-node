@@ -115,6 +115,10 @@ see `example.js` for more details
   smartTradesPanicSell (smart_trade_id)
   
   smartTradesForceProcess (smart_trade_id)
+  
+  smartTradesV2(params)
+  
+  createSmartTradesV2(params)
 ```
 
 ### for accounts
@@ -147,6 +151,6 @@ see `example.js` for more details
 
 buy me a beer 🍺
 
-BTC: 37N2MSShWExJGsKuAvBs9GEteUTrhZyvCi
+BTC: bc1qxrc2pluz4kv37syr90ry6dyntvwnlm8ucl0sdk
 
-ETH: 0x9F5e35e7DCa77A6Ec7a307213C5F65bc6d010088
+TRON: TEgRGRqNTtmjY8wGvCb4pTYjo1HYHCofkb
