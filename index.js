@@ -26,10 +26,14 @@ class threeCommasAPI {
       return new Error("missing api key or secret");
     }
 
-    const sig = this.generateSignature(path, stringify(params));
+    let tmp = stringify(params).replace(/\[\d+\]/g,'[]');
+    const sig = this.generateSignature(path, tmp);
 
     try {
-      let response = await fetch(`${this._url}${path}${stringify(params)}`, {
+      let url = `${this._url}${path}${stringify(params)}`;
+      url = url.replace(/\[\d+\]/g,'[]');
+
+      let response = await fetch(url, {
         method: method,
         timeout: 30000,
         agent: "",
