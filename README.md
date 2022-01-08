@@ -119,6 +119,10 @@ see `example.js` for more details
   smartTradesV2(params)
   
   createSmartTradesV2(params)
+  
+  cancelSmartTradesV2(smart_trade_id)
+  
+  closeMarketSmartTradesV2(smart_trade_id)
 ```
 
 ### for accounts
