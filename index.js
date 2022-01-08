@@ -418,6 +418,29 @@ class threeCommasAPI {
       params
     );
   }
+
+  /**
+   * cencel smarttrade trades version 2
+   */
+   async cancelSmartTradesV2(smart_trade_id) {
+    return await this.makeRequest(
+      "DELETE",
+      `/public/api/v2/smart_trades/${smart_trade_id}?`,
+      null
+    );
+  }
+
+  /**
+   * Close by market smart trade v2
+   * https://github.com/3commas-io/3commas-official-api-docs/blob/master/smart_trades_v2_api.md#close-by-market-smart-trade-v2-permission-smart_trade_write-security-signed
+   */
+   async closeMarketSmartTradesV2(smart_trade_id) {
+    return await this.makeRequest(
+      "POST",
+      `/public/api/v2/smart_trades/${smart_trade_id}/close_by_market?`,
+      {id:smart_trade_id}
+    );
+  }
 }
 
 module.exports = threeCommasAPI;
