@@ -123,6 +123,8 @@ see `example.js` for more details
   cancelSmartTradesV2(smart_trade_id)
   
   closeMarketSmartTradesV2(smart_trade_id)
+  
+  getSmartTradesByIdV2(smart_trade_id)
 ```
 
 ### for accounts
