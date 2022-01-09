@@ -441,6 +441,18 @@ class threeCommasAPI {
       {id:smart_trade_id}
     );
   }
+
+  /**
+   * Get smart trade v2 by id
+   * https://github.com/3commas-io/3commas-official-api-docs/blob/master/smart_trades_v2_api.md#get-smart-trade-v2-by-id-permission-smart_trade_read-security-signed
+   */
+   async getSmartTradesByIdV2(smart_trade_id) {
+    return await this.makeRequest(
+      "GET",
+      `/public/api/v2/smart_trades/${smart_trade_id}?`,
+      null
+    );
+  }
 }
 
 module.exports = threeCommasAPI;
